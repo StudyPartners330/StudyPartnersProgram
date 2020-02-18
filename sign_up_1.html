@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<body>
+
+<h1> Account Info <h1>
+
+  <form>
+
+      <label for="residence">Where do you live?</label><br>
+      <select id="residence" name="residence" required>
+        <option value="none"></option>
+        <option value="north">North Campus</option>
+        <option value="south">South Campus</option>
+        <option value="off">Off-Campus</option>
+      </select> <br>
+
+      <label for="major">Major(s)</label>
+      <input type="text" name="major" required> <br>
+
+      <label for="minor">Minor(s)</label>
+      <input type="text" name="minor" required> <br>
+
+      <label for="year">Year</label><br>
+      <select id="year" name="year"  requried>
+        <option value="none"></option>
+        <option value="freshman">Freshman</option>
+        <option value="sophomore">Sophomore</option>
+        <option value="junior">Junior</option>
+        <option value="senior">Senior</option>
+        <option value="grad">Grad Student</option>
+      </select><br>
+
+      <label>Availability</label><br>
+      <input type="checkbox" id="avail_morning" name="avail_morn">Morning <br>
+      <input type="checkbox" id="avail_afternoon" name="avail_an">Afternoon <br>
+      <input type="checkbox" id="avail_evening" name="avail_eve">Evening <br>
+      <input type="text" id="avail_other" name="avail_other" placeholder="Other"><br>
+
+      <label>Preferred work environment</label><br>
+      <input type="checkbox" id="env_libray" name="env_library">Library <br>
+      <input type="checkbox" id="env_home" name="env_home">Home <br>
+      <input type="checkbox" id="env_norris" name="env_norris">Norris <br>
+      <input type="checkbox" id="env_coffee" name="env_coffee">Coffee Shop <br>
+      <input type="text" id="env_other" name="env_other" placeholder="Other"></input>
+
+
+      <br>
+    
+
+      <input type="submit" class="btn btn-primary">
+
+  </form>
+
+
+
+</body>
+
+</html>
