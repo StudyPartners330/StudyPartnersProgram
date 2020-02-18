@@ -15,6 +15,7 @@
 
       <label for="residence">Where do you live?</label><br>
       <select id="residence" name="residence" required>
+        <option value="none"></option>
         <option value="north">North Campus</option>
         <option value="south">South Campus</option>
         <option value="off">Off-Campus</option>
@@ -27,13 +28,31 @@
       <input type="text" name="minor" required> <br>
 
       <label for="year">Year</label><br>
-      <select id="year" name="year" requried>
+      <select id="year" name="year"  requried>
+        <option value="none"></option>
         <option value="freshman">Freshman</option>
         <option value="sophomore">Sophomore</option>
         <option value="junior">Junior</option>
         <option value="senior">Senior</option>
         <option value="grad">Grad Student</option>
       </select><br>
+
+      <label>Availability</label><br>
+      <input type="checkbox" id="avail_morning" name="avail_morn">Morning <br>
+      <input type="checkbox" id="avail_afternoon" name="avail_an">Afternoon <br>
+      <input type="checkbox" id="avail_evening" name="avail_eve">Evening <br>
+      <input type="text" id="avail_other" name="avail_other" placeholder="Other"><br>
+
+      <label>Preferred work environment</label><br>
+      <input type="checkbox" id="env_libray" name="env_library">Library <br>
+      <input type="checkbox" id="env_home" name="env_home">Home <br>
+      <input type="checkbox" id="env_norris" name="env_norris">Norris <br>
+      <input type="checkbox" id="env_coffee" name="env_coffee">Coffee Shop <br>
+      <input type="text" id="env_other" name="env_other" placeholder="Other"></input>
+
+
+      <br>
+    
 
       <input type="submit" class="btn btn-primary">
 
