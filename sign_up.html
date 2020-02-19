@@ -10,13 +10,12 @@
 <script type="text/javascript">
   function t() {
 
-    var d = document.accountInfo.checkValidity();
-    console.log(d)
-    if (d){
-      alert("True")
+    var email_valid = validateEmail();
+    var PW_valid = validatePW();
+    var names_valid = checkNames();
+    if (email_valid && PW_valid && names_valid){
+      window.location.replace('sign_up_1.html');
     }
-    window.location.replace('sign_up_1.html');
-
   }
 </script>
 
@@ -26,13 +25,44 @@
          atpos = emailID.indexOf("@");
          dotpos = emailID.lastIndexOf(".");
          
-         if (atpos < 1 || ( dotpos - atpos < 2 )) {
-            alert("Please enter correct email ID")
-            document.myForm.EMail.focus() ;
+         if (atpos < 1 || ( dotpos - atpos < 2) || !emailID.includes("northwestern.edu")) {
+            alert("Please enter a valid NU email address");
+            document.accountInfo.email.focus();
             return false;
          }
          return( true );
       }
+</script>
+
+<script>
+  function validatePW() {
+    var pw = document.accountInfo.password.value;
+    var cpw = document.accountInfo.password_confirm.value;
+    if (pw.length < 8){
+      alert("Passwords must be at least 8 characters long");
+      document.accountInfo.password.focus();
+      return false;
+    }
+    else if (pw != cpw){
+      alert("Passwords must match");
+      document.accountInfo.password_confirm.focus();
+      return false;
+    }
+    return true;
+  }
+</script>
+
+<script>
+  function checkNames() {
+    var f = document.accountInfo.fname.value;
+    var l = document.accountInfo.lname.value;
+    if (f.length == "" & l.length == ""){
+      alert("Please enter your first and last name");
+      document.accountInfo.fname.focus();
+      return false;
+    }
+    return true;
+  }
 </script>
 
 <body>
@@ -41,21 +71,21 @@
 
 
 
-  <form id="accountInfo">
+  <form id="accountInfo" name="accountInfo">
 
       <div class="field">
           <label for="email">Email <p class="required">*</p></label><br>
-          <input type="email" id="email" name="email" placeholder="willie2022@u.northwestern.edu" required>
+          <input type="email" id="email" name="email" placeholder="willie2022@u.northwestern.edu">
       </div>
 
       <div class="field">
           <label for="password">Password <p class="required">*</p></label><br>
-          <input id="password" name="password" type="password" minlength="7" title="Password must be at least 7 characters." placeholder="***********" required>
+          <input id="password" name="password" type="password" minlength="7" title="Password must be at least 7 characters." placeholder="***********">
       </div>
 
       <div class="field">
           <p id="confirmPassword">Confirm Password <p class="required">*</p></p>
-          <input name="password_confirm" required="required" type="password" id="password_confirm" placeholder="***********" oninput="check(this)" />
+          <input name="password_confirm" type="password" id="password_confirm" placeholder="***********" oninput="check(this)" />
           <script language='javascript' type='text/javascript'>
           function check(input) {
           if (input.value != document.getElementById('password').value) {
@@ -71,17 +101,17 @@
 
       <div class="field">
           <label for="fname">First Name <p class="required">*</p></label><br>
-          <input type="text" id="fname" name="fname" placeholder="Willie" required>
+          <input type="text" id="fname" name="fname" placeholder="Willie">
       </div>
 
       <div class="field">
           <label for="lname">Last Name <p class="required">*</p></label><br>
-          <input type="text" id="lname" name="lname" placeholder="Wildcat" required>
+          <input type="text" id="lname" name="lname" placeholder="Wildcat">
       </div>
 
   </form>
 
-  <button onclick="t()" class="btn btn-primary">Create Account</button>
+  <button type="button" onclick="t()" class="btn btn-primary">Create Account</button>
 
 
 
