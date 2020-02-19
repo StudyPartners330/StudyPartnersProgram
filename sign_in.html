@@ -6,9 +6,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
 <link rel="stylesheet" href="css/extras.css">
+<link rel="stylesheet" href="css/signIn.css">
 
 <body>
 
+<h1 id="AcctInfo"> Sign In <h1>
+
+
+
+  <form>
+
+      <div class="field">
+          <label for="email">Email </label><br>
+          <input type="email" id="email" name="email" placeholder="willie2022@u.northwestern.edu" required>
+      </div>
+
+      <div class="field">
+          <label for="password">Password </label><br>
+          <input id="password" name="password" type="password" placeholder="***********">
+      </div>
+
+       <input type="submit" value="Sign In" class="btn btn-primary" onclick="location.href='home.html';"></button>
+
+  </form>
+
+
+
+  <p id="goBack">Don't have an account? <a href="./sign_up.html" id="signUp">Sign Up</a></p>
 
 
 </body>
