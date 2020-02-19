@@ -9,27 +9,37 @@
 
 <body>
 
-<h1 id="AcctInfo"> Account Info <h1>
+<h1 id="AcctInfo"> Sign Up <h1>
+
+
 
   <form>
 
-      <label for="fname">Email <p class="required">*</p></label><br>
-      <input type="email" id="fname" name="fname" placeholder="willie2022@u.northwestern.edu" required><br>
+      <div class="field">
+          <label for="fname">Email <p class="required">*</p></label><br>
+          <input type="email" id="fname" name="fname" placeholder="willie2022@u.northwestern.edu" required>
+      </div>
 
-      <label for="lname">Password <p class="required">*</p></label><br>
-      <input id="lname" name="lname" type="password" minlength="7" title="Password must be at least 7 characters." placeholder="***********"><br><br>
+      <div class="field">
+          <label for="lname">Password <p class="required">*</p></label><br>
+          <input id="lname" name="lname" type="password" minlength="7" title="Password must be at least 7 characters." placeholder="***********">
+      </div>
 
-      <label for="lname">First Name <p class="required">*</p></label><br>
-      <input type="text" id="lname" name="lname" placeholder="Willie"><br><br>
+      <div class="field">
+          <label for="lname">First Name <p class="required">*</p></label><br>
+          <input type="text" id="lname" name="lname" placeholder="Willie">
+      </div>
 
-      <label for="lname">Last Name <p class="required">*</p></label><br>
-      <input type="text" id="lname" name="lname" placeholder="Wildcat"><br><br>
+      <div class="field">
+          <label for="lname">Last Name <p class="required">*</p></label><br>
+          <input type="text" id="lname" name="lname" placeholder="Wildcat">
+      </div>
 
-      <input type="submit" class="btn btn-primary"></button>
+      <input type="submit" value="Create Account" class="btn btn-primary" href="./sign_up_1.html"></button>
 
   </form>
 
-
+  <p id="goBack">Already have an account? <a href="./sign_in.html" id="signIn">Sign In</a></p>
 
 </body>
 

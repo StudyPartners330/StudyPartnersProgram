@@ -1,11 +1,19 @@
+body {
+	background: #e3cfff;
+	font-family: 'Montserrat Alternates', sans-serif;
+}
 
-body > *{
-	margin-left: 5%;
+body > * {
+	height: auto;
 }
 
 #AcctInfo {
-	margin-top: 5%;
-	margin-bottom: 4%;
+	padding-top: 5%;
+	padding-bottom: 4%;
+	background-color: #5B3B8C;
+	color: white;
+	font-weight: bold;
+	text-align: center;
 }
 
 .required {
@@ -15,17 +23,37 @@ body > *{
 
 @media screen and (max-width: 700px) {
 	body {
-		font-size: 1em;
+		margin: 0px;
+		font-size: 1.25em;
 	}
 	form {
 		font-size: .5em;
+		padding-left: 5%;
 	}
-	form > label {
-		margin-bottom: 2%;
-	}
-	form > input {
-		margin-bottom: 2%;
-		margin-top: 2%;
+	input {
 		width: 85%;
+	}
+	form > * {
+		margin-bottom: 5%;
+	}
+	#goBack {
+		font-size: .35em;
+		margin-left: 5%;
+	}
+	#signIn {
+		color: #5B3B8C;
+		text-decoration: none;
+		font-weight: 900;
+	}
+	.btn-primary {
+		font-weight: bold;
+		background-color: #5B3B8C;
+		color: white;
+		cursor: pointer;
+		line-height: 150%;
+		width: 60%;
+		margin: auto;
+		margin-left: 10%;
+		border-radius: 25px;
 	}
 }
