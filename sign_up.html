@@ -16,18 +16,34 @@
   <form>
 
       <div class="field">
-          <label for="fname">Email <p class="required">*</p></label><br>
-          <input type="email" id="fname" name="fname" placeholder="willie2022@u.northwestern.edu" required>
+          <label for="email">Email <p class="required">*</p></label><br>
+          <input type="email" id="email" name="email" placeholder="willie2022@u.northwestern.edu" required>
       </div>
 
       <div class="field">
-          <label for="lname">Password <p class="required">*</p></label><br>
-          <input id="lname" name="lname" type="password" minlength="7" title="Password must be at least 7 characters." placeholder="***********">
+          <label for="password">Password <p class="required">*</p></label><br>
+          <input id="password" name="password" type="password" minlength="7" title="Password must be at least 7 characters." placeholder="***********">
       </div>
 
       <div class="field">
-          <label for="lname">First Name <p class="required">*</p></label><br>
-          <input type="text" id="lname" name="lname" placeholder="Willie">
+          <p id="confirmPassword">Confirm Password <p class="required">*</p></p>
+          <input name="password_confirm" required="required" type="password" id="password_confirm" placeholder="***********" oninput="check(this)" />
+          <script language='javascript' type='text/javascript'>
+          function check(input) {
+          if (input.value != document.getElementById('password').value) {
+            input.setCustomValidity('Password Must be Matching.');
+          } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+          }
+    }
+</script>
+<br /><br />
+<div>
+
+      <div class="field">
+          <label for="fname">First Name <p class="required">*</p></label><br>
+          <input type="text" id="fname" name="fname" placeholder="Willie">
       </div>
 
       <div class="field">
@@ -35,9 +51,11 @@
           <input type="text" id="lname" name="lname" placeholder="Wildcat">
       </div>
 
-      <input type="submit" value="Create Account" class="btn btn-primary" href="./sign_up_1.html"></button>
+       <input type="submit" value="Create Account" class="btn btn-primary" href="./sign_up_1.html" onclick="location.href='sign_up_1.html';"></button>
 
   </form>
+
+
 
   <p id="goBack">Already have an account? <a href="./sign_in.html" id="signIn">Sign In</a></p>
 
