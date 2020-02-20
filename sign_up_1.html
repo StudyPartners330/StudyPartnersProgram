@@ -9,34 +9,36 @@
 
 <body>
 
-<h1> Account Info <h1>
+<h1> Account Info </h1>
 
   <form>
 
 
       <div class="field">
-        <label for="residence">Where do you live?</label><br>
+        <label class="a" for="residence">Residence<p class="required">*</p></label><br>
         <select id="residence" name="residence" required>
-          <option value="none"></option>
-          <option value="north">North Campus</option>
-          <option value="south">South Campus</option>
-          <option value="off">Off-Campus</option>
+          <option value="none">Select</option>
+          <option value="northd">Dorm North Campus</option>
+          <option value="southd">Dorm South Campus</option>
+          <option value="offn">Off-Campus North</option>
+          <option value="offs">Off-Campus South</option>
         </select> 
       </div>
 
       <div class="field">
-        <label for="major">Major(s)</label>
-        <input type="text" name="major" required> <br>
+        <label class="a" for="major" >Major(s)<p class="required">*</p></label>
+        <input type="text" name="major" placeholder="Major(s) or Undecided"> <br>
       </div>
 
       <div class="field">
-        <label for="minor">Minor(s)</label>
-        <input type="text" name="minor" required> <br>
+        <label class="a" for="minor" >Minor(s) </label>
+        <input type="text" name="minor" placeholder="Minor(s)"> <br>
       </div>
+
       <div class="field">
-        <label for="year">Year</label><br>
-        <select id="year" name="year"  requried>
-          <option value="none"></option>
+        <label class="a" for="year">Year<p class="required">*</p></label><br>
+        <select id="year" name="year"  required>
+          <option value="none">Select</option>
           <option value="freshman">Freshman</option>
           <option value="sophomore">Sophomore</option>
           <option value="junior">Junior</option>
@@ -46,22 +48,34 @@
       </div>
 
       <div class="field">
-      <label>Availability</label><br>
-      <input type="checkbox" id="avail_morning" name="avail_morn">Morning <br>
-      <input type="checkbox" id="avail_afternoon" name="avail_an">Afternoon <br>
-      <input type="checkbox" id="avail_evening" name="avail_eve">Evening <br>
-      <input type="text" id="avail_other" name="avail_other" placeholder="Other"><br>
+        <label class="a">Time(s) Available<p class="required">*</p></label><br>
+        <input type="checkbox" id="morning" name="morning" value="morning">
+          <label for="morning">Morning</label><br>
+          <input type="checkbox" id="afternoon" name="afternoon" value="afternoon">
+          <label for="afternoon">Afternoon</label><br>
+          <input type="checkbox" id="night" name="night" value="night">
+          <label for="night">Night</label><br>
+          <input type="checkbox" id="weekend" name="weekend" value="weekend">
+          <label for="weekend">Weekend</label><br>
+          <input type="checkbox" id="weekday" name="weekday" value="weekday">
+          <label for="weekday">Weekdays</label><br>
       </div>
 
-      <label>Preferred work environment</label><br>
-      <input type="checkbox" id="env_libray" name="env_library">Library <br>
-      <input type="checkbox" id="env_home" name="env_home">Home <br>
-      <input type="checkbox" id="env_norris" name="env_norris">Norris <br>
-      <input type="checkbox" id="env_coffee" name="env_coffee">Coffee Shop <br>
-      <input type="text" id="env_other" name="env_other" placeholder="Other"></input>
-
-
-      <br>
+      <div class="field">
+      <label class="a">Preferred work environment(s)<p class="required">*</p></label><br>
+          <input type="checkbox" id="main" name="main" value="main">
+          <label for="main">Main Library</label><br>
+          <input type="checkbox" id="mudd" name="mudd" value="mudd">
+          <label for="mudd">Mudd Library</label><br>
+          <input type="checkbox" id="home" name="home" value="home">
+          <label for="home">Home/Dorm</label><br>
+          <input type="checkbox" id="norris" name="norris" value="norris">
+          <label for="norris">Norris</label><br>
+          <input type="checkbox" id="ev" name="ev" value="ev">
+          <label for="ev">Evanston</label><br>
+          <input type="checkbox" id="other" name="other" value="other">
+          <input type="text" placeholder="Other">
+              <br></div>
     
 
       <input type="submit" class="btn btn-primary">
