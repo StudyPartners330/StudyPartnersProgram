@@ -4,10 +4,13 @@
 <title>Home</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-<link rel="stylesheet" type="text/css" href="signup.css"> 
-
-<script type="text/javascript">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="signup.css">
+<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
   function t() {
 
     var email_valid = validateEmail();
@@ -24,7 +27,7 @@
          var emailID = document.accountInfo.email.value;
          atpos = emailID.indexOf("@");
          dotpos = emailID.lastIndexOf(".");
-         
+
          if (atpos < 1 || ( dotpos - atpos < 2) || !emailID.includes("northwestern.edu")) {
             alert("Please enter a valid NU email address");
             document.accountInfo.email.focus();
@@ -66,26 +69,25 @@
 </script>
 
 <body>
+<a href="index.html"> <button type="button" id="back-button" class="btn btn-secondary">BACK</button></a>
+<h1 id="AcctInfo" class="text-center"> Sign Up </h1>
+<h2 class="text-center">Find study partners today!</h2>
 
-<h1 id="AcctInfo"> Sign Up </h1>
 
-
-
-  <form id="accountInfo" name="accountInfo">
-
-      <div class="field">
-          <label for="email">Email <p class="required">*</p></label><br>
-          <input type="email" id="email" name="email" placeholder="willie2022@u.northwestern.edu">
+  <form id="accountInfo" name="accountInfo"
+      <div class="field form-group container">
+          <span for="email">Email <span class="required">*</span></span><br>
+          <input type="email" class="form-control form-control-lg border border-primary" id="email" name="email" placeholder="willie2022@u.northwestern.edu">
       </div>
 
-      <div class="field">
-          <label for="password">Password <p class="required">*</p></label><br>
-          <input id="password" name="password" type="password" minlength="7" title="Password must be at least 7 characters." placeholder="***********">
+      <div class="field form-group">
+          <span for="password">Password <span class="required">*</span></span>
+          <input id="password" class="form-control form-control-lg border border-primary" name="password" type="password" minlength="7" title="Password must be at least 7 characters." placeholder="***********">
       </div>
 
-      <div class="field">
-          <p id="confirmPassword">Confirm Password <p class="required">*</p></p>
-          <input name="password_confirm" type="password" id="password_confirm" placeholder="***********" oninput="check(this)" />
+      <div class="field form-group">
+          <span id="confirmPassword">Confirm Password <span class="required">*</span></span>
+          <input name="password_confirm" class="form-control form-control-lg border border-primary" type="password" id="password_confirm" placeholder="***********" oninput="check(this)" />
           <script language='javascript' type='text/javascript'>
           function check(input) {
           if (input.value != document.getElementById('password').value) {
@@ -96,27 +98,27 @@
           }
     }
 </script>
-<br /><br />
+<!-- <br /> -->
 <div>
 
-      <div class="field">
-          <label for="fname">First Name <p class="required">*</p></label><br>
-          <input type="text" id="fname" name="fname" placeholder="Willie">
+      <div class="field form-group">
+          <span for="fname">First Name <span class="required">*</span></span>
+          <input type="text" class="form-control form-control-lg border border-primary" id="fname" name="fname" placeholder="Willie">
       </div>
 
-      <div class="field">
-          <label for="lname">Last Name <p class="required">*</p></label><br>
-          <input type="text" id="lname" name="lname" placeholder="Wildcat">
+      <div class="field form-group">
+          <span for="lname">Last Name <span class="required">*</span></span>
+          <input type="text" class="form-control form-control-lg border border-primary" id="lname" name="lname" placeholder="Wildcat">
       </div>
 
   </form>
+<!-- </br> -->
+<div class="text-center">
+  <button type="button" onclick="t()" class="btn btn-primary ">Create Account</button>
 
-  <button type="button" onclick="t()" class="btn btn-primary">Create Account</button>
-
-
-
+<!-- </br> -->
   <p id="goBack">Already have an account? <a href="./sign_in.html" id="signIn">Sign In</a></p>
-
+</div>
 </body>
 
 </html>
