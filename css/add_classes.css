@@ -1,0 +1,16 @@
+
+
+
+form {
+	padding: 5%;
+	font-size: 1.5em;
+}
+
+input {
+	margin-top: 5%;
+	width: 90%;
+}
+
+#addClassButton {
+	width: 45%;
+}

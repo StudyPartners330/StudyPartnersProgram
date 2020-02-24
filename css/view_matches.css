@@ -1,0 +1,20 @@
+#carouselExampleCaptions {
+	margin: auto;
+}
+
+form {
+	margin-left: 2%;
+}
+
+#inlineFormCustomSelect {
+	width: 65%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#FilterBtn {
+	display: inline;
+	width: 30%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
