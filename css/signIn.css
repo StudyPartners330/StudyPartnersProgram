@@ -1,6 +1,6 @@
 body {
 	background: #e3cfff;
-	font-family: 'Montserrat Alternates', sans-serif;
+	font-family: Nunito;
 }
 
 body > * {
@@ -10,12 +10,24 @@ body > * {
 #AcctInfo {
 	padding-top: 5%;
 	padding-bottom: 4%;
-	background-color: #5B3B8C;
-	color: white;
-	font-weight: bold;
+	color: black;
+	font-family: Nunito;
 	text-align: center;
 }
 
+.container {
+	font-family: Nunito;
+}
+
+#back-button{
+	margin-left: 10px;
+	margin-top: 10px;
+}
+#password, #email {
+	background-color: #ededed;
+	font-family: Nunito;
+
+}
 
 @media screen and (max-width: 700px) {
 	body {
@@ -24,7 +36,6 @@ body > * {
 	}
 	form {
 		font-size: .5em;
-		padding-left: 5%;
 	}
 	input {
 		width: 85%;
@@ -34,12 +45,14 @@ body > * {
 	}
 	#goBack {
 		font-size: .35em;
-		margin-left: 5%;
+		font-family: Nunito;
+
 	}
 	#signUp {
 		color: #5B3B8C;
 		text-decoration: none;
 		font-weight: 900;
+		font-family: Nunito;
 	}
 	.btn-primary {
 		font-weight: bold;
@@ -49,7 +62,8 @@ body > * {
 		line-height: 150%;
 		width: 60%;
 		margin: auto;
-		margin-left: 10%;
 		border-radius: 25px;
+		font-family: Nunito;
+
 	}
 }
