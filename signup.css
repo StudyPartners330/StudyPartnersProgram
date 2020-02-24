@@ -10,8 +10,9 @@
 
 body {
 	font-family: Nunito;
-	font-size: 20px;
+	font-size: 24px;
 }
+
 
 select {
 	color: gray;
@@ -44,7 +45,7 @@ h2 {
 	margin-top: 10px;
 }
 
-#fname, #lname, #password, #password_confirm, #email, #gray{
+#fname, #lname, #password, #password_confirm, #email, #gray, #year{
 	background-color: #ededed;
 }
 
@@ -53,84 +54,14 @@ h2 {
 }
 
 #year {
-	margin-bottom: 4%;
-	background-color: #4a4949;
-
+	margin-bottom: 1%;
+	color: gray;
 }
 
 #submit {
 	margin-bottom: 6%;
 }
 
-
-
-/* body {
-	background: #e3cfff;
-	font-family: 'Montserrat Alternates', sans-serif;
+#goBack {
+font-size: 20px;
 }
-
-body > * {
-	height: auto;
-}
-
-h1 {
-	padding-top: 5%;
-	padding-bottom: 4%;
-	background-color: #5B3B8C;
-	color: white;
-	font-weight: bold;
-	text-align: center;
-}
-
-.required {
-	display: inline;
-	color: red;
-}
-
-#confirmPassword {
-	display: inline;
-}
-
-@media screen and (max-width: 700px) {
-	body {
-		margin: 0px;
-		font-size: 1.25em;
-	}
-	form {
-		font-size: .5em;
-		padding-left: 5%;
-	}
-	input {
-		width: 85%;
-	}
-	form > * {
-		margin-bottom: 5%;
-	}
-	#goBack {
-		font-size: .65em;
-		margin-left: 5%;
-	}
-	#signIn {
-		color: #5B3B8C;
-		text-decoration: none;
-		font-weight: 900;
-	}
-	.btn-primary {
-		font-weight: bold;
-		background-color: #5B3B8C;
-		color: white;
-		cursor: pointer;
-		line-height: 150%;
-		width: 60%;
-		margin: auto;
-		margin-left: 10%;
-		border-radius: 25px;
-	}
-	.a {
-		font-size: 1.5em;
-		font-weight: bold;
-	}
-	[type="checkbox"] {
-		width: 5%;
-	}
-} */
