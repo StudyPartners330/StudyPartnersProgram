@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/add_classes.css">
+
+
+    <title>Add Classes</title>
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">COURSES</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Add/View Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">View Matches</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Chat</a>
+      </li>
+    </ul>
+ <!--
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+-->
+  </div>
+</nav>
+
+
+<!-- autocomplete form to add classes -->
+	<form>
+      <input type="text" list="courses" name="courses" placeholder="Subject (eg. COMP_SCI)">
+      <datalist id="courses">
+        <option value="AF_AM_ST">
+		<option value="AFST">
+		<option value="AMER_ST">
+		<option value="ANTHRO">
+		<option value="ARABIC">
+		<option value="ART">
+		<option value="ART_HIST">
+		<option value="ASIAN_AM">
+		<option value="ASIAN_LC">
+		<option value="ASTRON">
+		<option value="BIOL_SCI">
+		<option value="BMD_ENG">
+		<option value="BUS_INST">
+		<option value="CFS">
+		<option value="CHEM">
+		<option value="CHEM_ENG">
+		<option value="CHINESE">
+		<option value="CIV_ENV">
+		<option value="CLASSICS">
+		<option value="CMN">
+		<option value="COG_SCI">
+		<option value="COMM_ST">
+		<option value="COMP_ENG">
+		<option value="COMP_LIT">
+		<option value="COMP_SCI">
+		<option value="CONDUCT">
+		<option value="CRDV">
+		<option value="CSD">
+		<option value="DANCE">
+		<option value="DSGN">
+		<option value="EARTH">
+		<option value="ECON">
+		<option value="ELEC_ENG">
+		<option value="ENGLISH">
+		<option value="ENTREP">
+		<option value="ENVR_POL">
+		<option value="ENVR_SCI">
+		<option value="ES_APPM">
+		<option value="FRENCH">
+		<option value="GBL_HLTH">
+		<option value="GEN_ENG">
+		<option value="GEN_LA">
+		<option value="GEN_MUS">
+		<option value="GEOG">
+		<option value="GERMAN">
+		<option value="GNDR_ST">
+		<option value="GREEK">
+		<option value="HDPS">
+		<option value="HEBREW">
+		<option value="HIND_URD">
+		<option value="HISTORY">
+		<option value="HUM">
+		<option value="IEMS">
+		<option value="IMC">
+		<option value="INTG_SCI">
+		<option value="INTL_ST">
+		<option value="ISEN">
+		<option value="ITALIAN">
+		<option value="JAPANESE">
+		<option value="JAZZ_ST">
+		<option value="JOUR">
+		<option value="JWSH_ST">
+		<option value="KELLG_CP">
+		<option value="KELLG_FE">
+		<option value="KELLG_MA">
+		<option value="KOREAN">
+		<option value="LATIN">
+		<option value="LATIN_AM">
+		<option value="LATINO">
+		<option value="LDRSHP">
+		<option value="LEGAL_ST">
+		<option value="LING">
+		<option value="LOC">
+		<option value="LRN_SCI">
+		<option value="MAT_SCI">
+		<option value="MATH">
+		<option value="MECH_ENG">
+		<option value="MENA">
+		<option value="MMSS">
+		<option value="MUS_COMP">
+		<option value="MUS_TECH">
+		<option value="MUS_THRY">
+		<option value="MUSIC">
+		<option value="MUSIC_ED">
+		<option value="MUSICOL">
+		<option value="NAV_SCI">
+		<option value="NEUROSCI">
+		<option value="NICO">
+		<option value="PERF_ST">
+		<option value="PERSIAN">
+		<option value="PHIL">
+		<option value="PHYSICS">
+		<option value="PIANO">
+		<option value="POLI_SCI">
+		<option value="POLISH">
+		<option value="PORT">
+		<option value="PRDV">
+		<option value="PSYCH">
+		<option value="RELIGION">
+		<option value="RTVF">
+		<option value="RUSSIAN">
+		<option value="SESP">
+		<option value="SHC">
+		<option value="SLAVIC">
+		<option value="SOC_POL">
+		<option value="SOCIOL">
+		<option value="SPANISH">
+		<option value="STAT">
+		<option value="STRINGS">
+		<option value="SWAHILI">
+		<option value="TEACH_ED">
+		<option value="THEATRE">
+		<option value="TRANS">
+		<option value="TURKISH">
+		<option value="VOICE">
+		<option value="WIND_PER">
+		<option value="YIDDISH">
+      </datalist>
+      <br>
+
+      <input type="number" name="number" placeholder="Course Number (eg. 330)">
+	  <br>
+	  <br>
+	  <br>
+
+      <button type="button" class="btn btn-primary">Add Class</button>
+    </form>
+
+
+    <!-- classes entered -->
+    <div id="myClasses">
+    <!-- edit innerHTML on add course button click -->
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </body>
+</html>
