@@ -11,6 +11,10 @@ input {
 	width: 90%;
 }
 
-#addClassButton {
-	width: 45%;
+.btn {
+	width: 35%;
+}
+
+body {
+	background-color: #e3cfff;
 }
