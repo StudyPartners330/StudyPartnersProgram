@@ -100,15 +100,15 @@
           <span id="confirmPassword">Confirm Password <span class="required">*</span></span>
           <input name="password_confirm" class="form-control form-control-lg border border-primary" type="password" id="password_confirm" placeholder="***********" oninput="check(this)" />
           <script language='javascript' type='text/javascript'>
-          function check(input) {
-          if (input.value != document.getElementById('password').value) {
-            input.setCustomValidity('Password Must be Matching.');
-          } else {
-            // input is valid -- reset the error message
-            input.setCustomValidity('');
-          }
-    }
-</script>
+            function check(input) {
+              if (input.value != document.getElementById('password').value) {
+                input.setCustomValidity('Password Must be Matching.');
+              } else {
+                // input is valid -- reset the error message
+                input.setCustomValidity('');
+              }
+            }
+          </script>
 <!-- <br /> -->
 <div>
 

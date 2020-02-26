@@ -10,7 +10,32 @@
     <link rel="stylesheet" href="css/add_classes.css">
 
 
-    <title>Add Classes</title>
+	<title>Add Classes</title>
+	
+	<script>
+		function add_class(){
+			var sub = document.getElementById("course_subject_input").value;
+			var nm = document.getElementById("course_number_input").value;
+			if (sub.length == 0 || nm.length < 3){
+				return
+			}
+			document.getElementById("current-courses").innerHTML += `
+			<div class="card course-card">
+				<div class="card-body">
+					<h5 class="card-title">${sub + " " + nm}</h5>
+					<a href="#" class="btn btn-primary rm">Remove</a>
+				</div>
+			</div>
+			`;
+			for (cc of document.getElementsByClassName("course-card")){
+				cc.getElementsByClassName("rm")[0].addEventListener("click",function() {
+					this.parentElement.parentElement.remove();
+				})
+			}
+			document.getElementById("course_subject_input").value = "";
+			document.getElementById("course_number_input").value = "";
+		}
+	</script>
   </head>
   <body>
     <!-- nav bar -->
@@ -22,18 +47,21 @@
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current"></span></a>
+        <a class="nav-link" href="add_classes.html">Add/View Courses <span class="sr-only">(current"></span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Add/View Courses</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">View Matches</a>
+        <a class="nav-link" href="view_matches.html">View Matches</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Chat</a>
-      </li>
+	  </li>
+	  <li class="nav-item">
+		  <a class="nav-link" href=#>Log Out</a>
+	  </li>
     </ul>
  <!--
     <form class="form-inline my-2 my-lg-0">
@@ -44,11 +72,12 @@
   </div>
 </nav>
 
-
+	<div id="current-courses">
+	</div>
 <!-- autocomplete form to add classes -->
 	<form>
-      <input type="text" list="courses" name="courses" placeholder="Subject (eg. COMP_SCI)">
-      <datalist id="courses">
+      <input type="text" list="courses" name="courses" id="course_subject_input" placeholder="Subject (eg. COMP_SCI)">
+      <datalist name="courses" id="courses">
         <option value="AF_AM_ST">
 		<option value="AFST">
 		<option value="AMER_ST">
@@ -169,10 +198,10 @@
       </datalist>
       <br>
 
-      <input type="number" name="number" placeholder="Course Number (eg. 330)">
-      <br><br><br>
+      <input type="number" name="number" id="course_number_input" placeholder="Course Number (eg. 330)">
+      <br><br>
 
-      <button class="btn btn-primary" type="button" onclick="">Add Class</button>
+      <button class="btn btn-primary" type="button" onclick="add_class()">Add Class</button>
     </form>
 
 
