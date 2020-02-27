@@ -12,6 +12,12 @@
 
     <title>View Matches</title>
 
+    <script> 
+    var retrievedData = localStorage.getItem("classes");
+    var myclasses = JSON.parse(retrievedData);
+    console.log(myclasses);
+    </script>
+
     <!-- starter for populating carousel with matches
     <script>
     function view_matches(){
@@ -82,6 +88,15 @@
       <button id="FilterBtn" type="submit" class="btn btn-primary">Filter</button>
   </div>
 </form>
+
+    <script> 
+    
+    for (c of myclasses){
+      let x = document.createElement("option");
+      x.text=c;
+      document.getElementById("inlineFormCustomSelect").add(x);
+    }  
+    </script>
 
 <!-- Match tile templates -->
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
