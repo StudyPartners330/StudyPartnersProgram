@@ -6,6 +6,9 @@ form {
 	margin-left: 2%;
 }
 
+#selectedpage {
+	border: .5px solid black;
+}
 #inlineFormCustomSelect {
 	width: 65%;
 	margin-top: 5%;
