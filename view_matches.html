@@ -11,13 +11,36 @@
 
 
     <title>View Matches</title>
+
+    <!-- starter for populating carousel with matches
+    <script>
+    function view_matches(){
+
+      for (MATCH of MATCHES) {
+        
+        document.getElementByClass("carousel-indicators").innerHTML += `
+        <li data-target="#carouselExampleCaptions" data-slide-to="${COUNTER}"></li>
+        `; 
+
+        document.getElementByClass("carousel-inner").innerHTML += `
+        <div class="carousel-item">
+        <img src="https://st3.depositphotos.com/6672868/14376/v/450/depositphotos_143767633-stock-illustration-user-profile-group.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h5>${[NAME]}</h5>
+          <p>${[PROFILE INFO]}</p>
+          <button type="button" onclick="" class="btn btn-primary">Chat</button>
+        </div>
+        </div>
+        `;}
+      }
+  </script> -->
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">COURSES</a>
+    <nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand" href="#">MY MATCHES</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"><hr><hr><hr></span>
       </button>
     
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -50,17 +73,15 @@
 <!-- choose class to view matches -->
 <form id="courseFilter">
   <div>
-      <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Courses</label>
+      <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">MATCHES</label>
       <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-        <option selected>Courses</option>
-        <option selected>COMP_SCI 330</option>
+        <option selected>My Courses</option>
         <!-- populate options with inputed courses from add_class page
         <option value=""></option> -->
       </select>
       <button id="FilterBtn" type="submit" class="btn btn-primary">Filter</button>
   </div>
 </form>
-
 
 <!-- Match tile templates -->
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -71,7 +92,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0HDQ0NDQ0NDQ0NDQcNDQ8IDQcNFREWFhURFRUYHSggGBoxJxMVITEhMSkrLi4uFx8zOD8sNygtLisBCgoKBwcHDgcHDjIZFRkrKysrKysrKysrKysrKzcrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAWAAEBAQAAAAAAAAAAAAAAAAAAAQf/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAYE/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Az4BQsYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAIAAAAAAAAAAAAAAAAAAoAgAKgAAAAA//Z" class="d-block w-100" alt="...">
+      <img src="https://st3.depositphotos.com/6672868/14376/v/450/depositphotos_143767633-stock-illustration-user-profile-group.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption">
         <h5>[Match 1]</h5>
         <p>[basic profile info]</p>
@@ -79,7 +100,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0HDQ0NDQ0NDQ0NDQcNDQ8IDQcNFREWFhURFRUYHSggGBoxJxMVITEhMSkrLi4uFx8zOD8sNygtLisBCgoKBwcHDgcHDjIZFRkrKysrKysrKysrKysrKzcrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAWAAEBAQAAAAAAAAAAAAAAAAAAAQf/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAYE/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Az4BQsYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAIAAAAAAAAAAAAAAAAAAoAgAKgAAAAA//Z" class="d-block w-100" alt="...">
+      <img src="https://st3.depositphotos.com/6672868/14376/v/450/depositphotos_143767633-stock-illustration-user-profile-group.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption">
         <h5>[Match 2]</h5>
         <p>[basic profile info]</p>
@@ -87,7 +108,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0HDQ0NDQ0NDQ0NDQcNDQ8IDQcNFREWFhURFRUYHSggGBoxJxMVITEhMSkrLi4uFx8zOD8sNygtLisBCgoKBwcHDgcHDjIZFRkrKysrKysrKysrKysrKzcrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAWAAEBAQAAAAAAAAAAAAAAAAAAAQf/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAYE/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Az4BQsYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAIAAAAAAAAAAAAAAAAAAoAgAKgAAAAA//Z" class="d-block w-100" alt="...">
+      <img src="https://st3.depositphotos.com/6672868/14376/v/450/depositphotos_143767633-stock-illustration-user-profile-group.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption">
         <h5>[Match 3]</h5>
         <p>[basic profile info]</p>

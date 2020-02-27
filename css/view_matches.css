@@ -11,13 +11,45 @@ form {
 	margin-top: 5%;
 	margin-bottom: 5%;
 }
-
+.btn {
+	width: 30%;
+	font-weight: 700;
+	font-size: 1em;
+	color: #4E2A84;
+	background-color: white;
+	border: 2.5px solid white;
+	border-radius: 10px;
+	text-align: center;
+}
 #FilterBtn {
 	display: inline;
 	width: 30%;
 	margin-top: 5%;
 	margin-bottom: 5%;
+	color: white;
+	background-color: #4E2A84;
+	border: 2.5px solid #4E2A84;
 }
-body{
-	background-color: #e3cfff;
+.carousel-caption {
+	background: rgba(0, 0, 0, 0.5);
+}
+.navbar {
+	background-color: #401F68;
+	color: white;
+	font-weight: 600;
+}
+.navbar-brand {
+	color: white;
+}
+.nav-link {
+	color: white;
+}
+.navbar-toggler {
+	background-color: white;
+}
+hr {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding: 0;
+	border: 2px solid #401F68;
 }

@@ -14,7 +14,7 @@
 	
 	<script>
 		function add_class(){
-			var sub = document.getElementById("course_subject_input").value;
+			var sub = document.getElementById("course_subject_input").value.toUpperCase();
 			var nm = document.getElementById("course_number_input").value;
 			if (sub.length == 0 || nm.length < 3){
 				return
@@ -38,11 +38,12 @@
 	</script>
   </head>
   <body>
+
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">COURSES</a>
+    <nav class="navbar navbar-expand-lg ">
+  <a class="navbar-brand" href="#">ADD/VIEW COURSES</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"><hr><hr><hr></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -72,8 +73,7 @@
   </div>
 </nav>
 
-	<div id="current-courses">
-	</div>
+	
 <!-- autocomplete form to add classes -->
 	<form>
       <input type="text" list="courses" name="courses" id="course_subject_input" placeholder="Subject (eg. COMP_SCI)">
@@ -204,11 +204,12 @@
       <button class="btn btn-primary" type="button" onclick="add_class()">Add Class</button>
     </form>
 
+    <p id="title">My Courses:</p>
 
     <!-- classes entered -->
-    <div id="myClasses">
-    <!-- edit innerHTML on add course button click -->
-    </div>
+    <div id="current-courses">
+	</div>
+
 
 
     <!-- Optional JavaScript -->
