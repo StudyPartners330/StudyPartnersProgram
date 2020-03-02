@@ -1,0 +1,72 @@
+.navbar {
+	background-color: #401F68;
+	color: white;
+	font-weight: 600;
+}
+.navbar-brand {
+	color: white;
+}
+.nav-link {
+	color: white;
+}
+.navbar-toggler {
+	background-color: white;
+}
+hr {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding: 0;
+	border: 2px solid #401F68;
+}
+.btn {
+	font-weight: 700;
+	font-size: 1em;
+}
+.fas {
+	text-align: right;
+}
+
+.btn {
+	background-color: #4E2A84;
+	color: white;
+}
+
+.filter {
+	width: 44%;
+	border-color: #4E2A84;
+	background-color: white;
+	color: #4E2A84;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	margin-top: 3%;
+}
+
+.filterHeader {
+	text-align: center;
+	margin-bottom: 2%;
+	margin-top: 3%;
+	font-weight: 700;
+}
+
+#apply {
+	width: 80%;
+	margin-top: 8%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.filterSeparator {
+	border-color: #E4E0EE;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.buttonHeader {
+	width: 100%;
+}
+.headerbtn {
+	width: 44%;
+	margin-top: 3%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
