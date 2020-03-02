@@ -10,7 +10,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/view_matches.css">
+    <!-- <link rel="stylesheet" href="css/view_matches.css"> -->
+    <link rel="stylesheet" href="css/filtering.css">
 
 
     <title>View Matches</title>
@@ -21,6 +22,7 @@
     console.log(myclasses);
 
     </script>
+    <script src="https://kit.fontawesome.com/efa076c6fc.js" crossorigin="anonymous"></script>
 
   </head>
   <body>
@@ -52,36 +54,90 @@
       </div>
     </nav>
 
-
-<form id="courseFilter"><div>
-    <label>course select</label>
-    <select class="form-control">
-    <option><select id="classSelect" multiple searchable="Search here..">
-      <option value="" disabled selected>Course(s)</option>
-    </select></option>
-      
+<div id="buttonHeader"> <button id="filterBtn" class="btn headerbtn">Filters <i class="fas fa-caret-down"></i></button>
+<button id="default" class="btn-save btn btn-primary btn-sm headerbtn">View All</button>    </div>
+    <div id="filterSelect">
+      <p class="filterHeader">Course(s)</p><hr class="filterSeparator"><div id="classSelect"></div>
+      <p class="filterHeader">Time(s) Available</p><hr class="filterSeparator"><div id="availabilitySelect">
+        <button class="avail btn filter" id="morning">Morning</button>
+        <button class="avail btn filter" id="afternoon">Afternoon</button>
+        <button class="avail btn filter" id="evening">Evening</button>
+        <button class="avail btn filter" id="weekdays">Weekday</button>
+        <button class="avail btn filter" id="weekends">Weekend</button>
+    </div>
+    <p class="filterHeader">Year(s)</p><hr class="filterSeparator"><div id="yearSelect">
+        <button class="year btn filter" id="freshman">Freshman</button>
+        <button class="year btn filter" id="sophomore">Sophomore</button>
+        <button class="year btn filter" id="junior">Junior</button>
+        <button class="year btn filter" id="senior">Senior</button>
+        <button class="year btn filter" id="graduate">Graduate</button>
+    </div>
+    <button class="apply btn" id="apply">Apply Filters</button>
+    </div>
+     
           
-    <button id="filterBtn" class="btn-save btn btn-primary btn-sm">Filter</button>
+    
 </div></form>
 
+<div id="matches">
+  <!-- display applicable matches here -->
+</div>
+
+
+</div>
 
     <script> 
+    // set up drop down course filter selection
+    document.querySelector('#filterSelect').style.visibility = "hidden";
+
+    var filterList =[];
     
+    // fill in user's classes
     for (c of myclasses){
-      let x = document.createElement("option");
-      x.text=c;
-      x.value=c;
-      document.getElementById("classSelect").add(x);
+      document.querySelector("#classSelect").innerHTML +=
+      `<button class="courses btn filter" id=${c}>${c}</button>`;
     }  
 
-    document.getElementById('filterBtn').addEventListener("click",function(ev) {
-      // if 'select all' ??
-      default_show_all();
-      // else get what's selected ??
-      for (// filters selected) {
-        filter(//class name of filter);}
+    // toggle selection of courses
+    for (c of document.getElementsByClassName('filter')) {
+      c.addEventListener("click",function(ev){
+        let name = ev.currentTarget;
+        if (filterList.includes(name.getAttribute('id'))) {
+          let index = filterList.indexOf(name.getAttribute('id'));
+          filterList.splice(index,1);
+          name.style.backgroundColor = 'white';
+          name.style.color = '#4E2A84';
+          console.log(filterList);
+        }
+        else {
+          filterList.push(name.getAttribute('id'));
+          name.style.backgroundColor = '#E4E0EE';
+          name.style.color = '#4E2A84';
+          console.log(filterList);
+        }
+      });}
       
-    })
+
+    // toggle display of dropdown
+    document.getElementById('filterBtn').addEventListener("click",function(ev){
+      var x = document.getElementById("filterSelect");
+      if (x.style.visibility === "hidden") {
+        x.style.visibility = "visible";
+      } else {
+        x.style.visibility = "hidden";
+      }
+    });
+
+    
+    document.getElementById('apply').addEventListener("click",function(ev) {
+      document.getElementById("filterSelect").style.visibility = "hidden";
+      if (filterList.length === 0){
+        default_show_all();}
+      else {
+        for (f of filterList) {
+         filter(f);}}
+      })
+
 
     function default_show_all(){
       let matches = document.getElementsByClassName("match");
