@@ -1,4 +1,6 @@
-
+body {
+	font-family: Nunito;
+}
 form {
 	padding: 8%;
 	font-size: 1.5em;

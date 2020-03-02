@@ -1,18 +1,6 @@
 body {
 	font-family: Nunito;
 }
-form {
-	margin-left: 2%;
-}
-
-#selectedpage {
-	border: .5px solid black;
-}
-#inlineFormCustomSelect {
-	width: 65%;
-	margin-top: 5%;
-	margin-bottom: 5%;
-}
 .btn {
 	width: 30%;
 	font-weight: 700;
@@ -22,18 +10,6 @@ form {
 	border: 2.5px solid white;
 	border-radius: 10px;
 	text-align: center;
-}
-#FilterBtn {
-	display: inline;
-	width: 30%;
-	margin-top: 5%;
-	margin-bottom: 5%;
-	color: white;
-	background-color: #4E2A84;
-	border: 2.5px solid #4E2A84;
-}
-.carousel-caption {
-	background: rgba(0, 0, 0, 0.5);
 }
 .navbar {
 	background-color: #401F68;

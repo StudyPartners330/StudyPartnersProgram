@@ -1,5 +1,4 @@
 body {
-	background: #e3cfff;
 	font-family: Nunito;
 }
 
@@ -8,9 +7,7 @@ body > * {
 }
 
 #AcctInfo {
-	padding-top: 5%;
-	padding-bottom: 4%;
-	color: black;
+	color: white;
 	font-family: Nunito;
 	text-align: center;
 }
@@ -27,6 +24,7 @@ body > * {
 	background-color: #ededed;
 	font-family: Nunito;
   margin-bottom: 2%;
+  border-color: #5B3B8C;
 }
 
 #gotosignup {
@@ -34,13 +32,8 @@ body > * {
 	font-family: Nunito;
 }
 
-@media screen and (max-width: 700px) {
 	body {
 		margin: 0px;
-		font-size: 1.25em;
-	}
-	form {
-		font-size: .5em;
 	}
 	input {
 		width: 85%;
@@ -49,7 +42,6 @@ body > * {
 		margin-bottom: 5%;
 	}
 	#goBack {
-		font-size: .5em;
 		font-family: Nunito;
 
 	}
@@ -68,7 +60,23 @@ body > * {
 		width: 60%;
 		margin: auto;
 		border-radius: 25px;
+		border-color: #5B3B8C;
 		font-family: Nunito;
 
 	}
+h2 {
+	font-size: 16px;
+	font-style: italic;
+	padding-bottom: 2%;
+}
+label {
+	font-size: 1.5em;
+}
+h1 {
+	margin-top: 4%;
+	font-weight: bold;
+	text-align: center;
+	font-weight: 700;
+	background-color: #4E2A84;
+	color: white;
 }

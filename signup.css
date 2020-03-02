@@ -20,20 +20,18 @@ select {
 }
 
 h1 {
-	padding-top: 4%;
+	margin-top: 4%;
 	font-weight: bold;
 	text-align: center;
+	font-weight: 700;
+	background-color: #4E2A84;
+	color: white;
 }
 
 h2 {
 	font-size: 16px;
 	font-style: italic;
 	padding-bottom: 2%;
-}
-
- {
-	width: 20px;
-	height: 20px;
 }
 
 .required{
@@ -47,10 +45,12 @@ h2 {
 
 #fname, #lname, #password, #password_confirm, #email, #gray, #year{
 	background-color: #ededed;
+	border-color: #4E2A84;
 }
 
 #year, #residence {
 	border-radius: 5px;
+	border-color: #4E2A84;
 }
 
 #year {
@@ -64,4 +64,18 @@ h2 {
 
 #goBack {
 font-size: 20px;
+}
+
+.BTN {
+	width: 70%;
+	border-radius: 25px;
+	margin-right: 15%;
+	margin-left: 15%;
+	background-color: #4E2A84;
+	color: white;
+	font-weight: 700;
+	border-color: #4E2A84;
+}
+#signIn {
+	color: #4E2A84;
 }
