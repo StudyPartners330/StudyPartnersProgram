@@ -13,19 +13,24 @@ body {
 	font-size: 24px;
 }
 
-
+#acctinfo {
+	margin-top: 10px;
+}
 select {
 	color: gray;
 	font-size: 20px;
 }
 
 h1 {
-	margin-top: 4%;
+	margin-top: 0%;
 	font-weight: bold;
 	text-align: center;
 	font-weight: 700;
 	background-color: #4E2A84;
 	color: white;
+	font-size: 40px;
+	padding: 10px;
+
 }
 
 h2 {
@@ -64,6 +69,10 @@ h2 {
 
 #goBack {
 font-size: 20px;
+}
+
+#createaccount {
+	margin-top: 16px;
 }
 
 .BTN {
