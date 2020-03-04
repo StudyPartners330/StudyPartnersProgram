@@ -17,7 +17,7 @@
 
     <title>View Matches</title>
 
-    <script> 
+    <script>
     var retrievedData = localStorage.getItem("classes");
     var myclasses = JSON.parse(retrievedData);
     console.log(myclasses);
@@ -76,9 +76,9 @@
     </div>
     <button class="apply btn" id="apply">Apply Filters</button>
     </div>
-     
-          
-    
+
+
+
 </div></form>
 
 <div id="matches">
@@ -88,17 +88,17 @@
 
 </div>
 
-    <script> 
+    <script>
     // set up drop down course filter selection
     document.querySelector('#filterSelect').style.visibility = "hidden";
 
     var filterList =[];
-    
+
     // fill in user's classes
     for (c of myclasses){
       document.querySelector("#classSelect").innerHTML +=
       `<button class="courses btn filter" id=${c}>${c}</button>`;
-    }  
+    }
 
 
     // toggle selection of courses
@@ -114,12 +114,12 @@
         }
         else {
           filterList.push(name.getAttribute('id'));
-          name.style.backgroundColor = '#E4E0EE';
+          name.style.backgroundColor = '#9c9a9a';
           name.style.color = '#4E2A84';
           console.log(filterList);
         }
       });}
-      
+
 
     // toggle display of dropdown
     document.getElementById('filterBtn').addEventListener("click",function(ev){
@@ -131,7 +131,7 @@
       }
     });
 
-    
+
     document.getElementById('apply').addEventListener("click",function(ev) {
       document.getElementById("filterSelect").style.visibility = "hidden";
       if (filterList.length === 0){
@@ -147,7 +147,7 @@
       for (match of matches) {
         match.style.visibility = 'visible';
       }
-    } 
+    }
 
     function filter(y){
       let x = document.getElementsByClassName(y);
