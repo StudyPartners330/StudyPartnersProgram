@@ -1,11 +1,6 @@
-# project5
+# project7
 
-We implemented a user profile component such that our interface may 
-provide personalized content for each user.
+We implemented a chat functionality and the feature of adding classes for this week. 
 
-Our target audience will test this feature by navigating the screen (index.html) 
-which provides two options: sign in or sign up.
-We will then test whether the profile creation process is intuitive and easy to
-navigate depending on user needs (ex: clicked the wrong button and need to go back,
-knows how to submit the form which creates their profile or logs them in,
-knows which fields are required)
+Our target audience will test this feature by using our feature from last week (filtering matches) and then clicking chat when they find someone who they want to talk to. Then, they're taken to a personalized chat page where they can message with the other person.
+For add classes, the user will first select the department of the class and then the number. The classes that they add will be viewable at the bottom of the screen and then will prompt the user to view their matches based on the classes that they entered. 
