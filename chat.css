@@ -59,3 +59,9 @@ body {
     margin-right: 40px;
     left: 10px;
   }
+hr {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding: 0;
+	border: 2px solid #401F68;
+}
