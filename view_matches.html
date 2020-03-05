@@ -297,6 +297,7 @@
     // fill in user's classes
     for (c of myclasses){
       let a = c.replace( /\s/g, '');
+      a = a.substring(0, a.indexOf('-'));
       document.querySelector("#classSelect").innerHTML +=
       `<button class="courses btn filter ${a}" id=${a}>${c}</button>`;
     }
