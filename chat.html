@@ -39,9 +39,15 @@
       </nav>
       </head>
       <body>
-        <img src="https://www.clipartkey.com/mpngs/m/201-2017389_bitmoji-transparent-background-bitmojis-de-snapchat.png" class="profile-img" alt="...">
+        <script>
+          var A = localStorage.getItem("image");
+          document.querySelector("body").innerHTML += "<img class='profile-img' src=" + A + " alt='...'>";
+        </script>
         <div class="profile-name">
-            Student
+            <script>
+              var B = localStorage.getItem("name");
+              document.querySelector(".profile-name").innerHTML += B;
+            </script>
         </div>
       </body>
       <script language='javascript' type='text/javascript'>
