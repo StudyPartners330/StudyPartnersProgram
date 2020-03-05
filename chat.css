@@ -15,6 +15,9 @@ body {
 .navbar-toggler {
 	background-color: white;
 }
+.profile-img {
+  width: 30%;
+}
 
 .input_msg_write input {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
