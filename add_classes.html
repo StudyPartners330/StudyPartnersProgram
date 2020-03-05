@@ -50,8 +50,46 @@
 			localStorage.setItem("classes", JSON.stringify(classes));
 		}
 	</script>
+		
+	<script>
+		function get_subjects(){
+			var url = "https://cors-anywhere.herokuapp.com/http://api.asg.northwestern.edu/subjects/?key=lCoAZTSDwNnBduU3&term=4760";
+			fetch(url)
+				.then(response => {
+					console.log(response);
+					return response.json();
+				})
+				.then((myJson) =>{
+
+					for (sb of myJson){
+						document.getElementById("courses").innerHTML += `<option value="${sb.symbol}">
+						`;
+					}
+				})
+			document.getElementById("course_number_input").addEventListener("focusin", get_class_nums);
+		}
+
+
+
+		function get_class_nums(){
+			var sub = document.getElementById("course_subject_input").value.toUpperCase();
+			var url = "https://cors-anywhere.herokuapp.com/http://api.asg.northwestern.edu/courses/?key=lCoAZTSDwNnBduU3&term=4760&subject=" + sub;
+			fetch(url)
+				.then(response => {
+					console.log(response);
+					return response.json();
+				})
+				.then((myJson) =>{
+					console.log(myJson);
+					for (crs of myJson){
+						document.getElementById("course_nums").innerHTML += `<option value="${crs.catalog_num}">
+						`;
+					}
+				});
+		}
+	</script>
   </head>
-  <body>
+  <body onload="get_subjects()">
 
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg ">
@@ -92,128 +130,15 @@
 	<form>
       <input type="text" list="courses" name="courses" id="course_subject_input" placeholder="Subject (eg. COMP_SCI)">
       <datalist name="courses" id="courses">
-        <option value="AF_AM_ST">
-		<option value="AFST">
-		<option value="AMER_ST">
-		<option value="ANTHRO">
-		<option value="ARABIC">
-		<option value="ART">
-		<option value="ART_HIST">
-		<option value="ASIAN_AM">
-		<option value="ASIAN_LC">
-		<option value="ASTRON">
-		<option value="BIOL_SCI">
-		<option value="BMD_ENG">
-		<option value="BUS_INST">
-		<option value="CFS">
-		<option value="CHEM">
-		<option value="CHEM_ENG">
-		<option value="CHINESE">
-		<option value="CIV_ENV">
-		<option value="CLASSICS">
-		<option value="CMN">
-		<option value="COG_SCI">
-		<option value="COMM_ST">
-		<option value="COMP_ENG">
-		<option value="COMP_LIT">
-		<option value="COMP_SCI">
-		<option value="CONDUCT">
-		<option value="CRDV">
-		<option value="CSD">
-		<option value="DANCE">
-		<option value="DSGN">
-		<option value="EARTH">
-		<option value="ECON">
-		<option value="ELEC_ENG">
-		<option value="ENGLISH">
-		<option value="ENTREP">
-		<option value="ENVR_POL">
-		<option value="ENVR_SCI">
-		<option value="ES_APPM">
-		<option value="FRENCH">
-		<option value="GBL_HLTH">
-		<option value="GEN_ENG">
-		<option value="GEN_LA">
-		<option value="GEN_MUS">
-		<option value="GEOG">
-		<option value="GERMAN">
-		<option value="GNDR_ST">
-		<option value="GREEK">
-		<option value="HDPS">
-		<option value="HEBREW">
-		<option value="HIND_URD">
-		<option value="HISTORY">
-		<option value="HUM">
-		<option value="IEMS">
-		<option value="IMC">
-		<option value="INTG_SCI">
-		<option value="INTL_ST">
-		<option value="ISEN">
-		<option value="ITALIAN">
-		<option value="JAPANESE">
-		<option value="JAZZ_ST">
-		<option value="JOUR">
-		<option value="JWSH_ST">
-		<option value="KELLG_CP">
-		<option value="KELLG_FE">
-		<option value="KELLG_MA">
-		<option value="KOREAN">
-		<option value="LATIN">
-		<option value="LATIN_AM">
-		<option value="LATINO">
-		<option value="LDRSHP">
-		<option value="LEGAL_ST">
-		<option value="LING">
-		<option value="LOC">
-		<option value="LRN_SCI">
-		<option value="MAT_SCI">
-		<option value="MATH">
-		<option value="MECH_ENG">
-		<option value="MENA">
-		<option value="MMSS">
-		<option value="MUS_COMP">
-		<option value="MUS_TECH">
-		<option value="MUS_THRY">
-		<option value="MUSIC">
-		<option value="MUSIC_ED">
-		<option value="MUSICOL">
-		<option value="NAV_SCI">
-		<option value="NEUROSCI">
-		<option value="NICO">
-		<option value="PERF_ST">
-		<option value="PERSIAN">
-		<option value="PHIL">
-		<option value="PHYSICS">
-		<option value="PIANO">
-		<option value="POLI_SCI">
-		<option value="POLISH">
-		<option value="PORT">
-		<option value="PRDV">
-		<option value="PSYCH">
-		<option value="RELIGION">
-		<option value="RTVF">
-		<option value="RUSSIAN">
-		<option value="SESP">
-		<option value="SHC">
-		<option value="SLAVIC">
-		<option value="SOC_POL">
-		<option value="SOCIOL">
-		<option value="SPANISH">
-		<option value="STAT">
-		<option value="STRINGS">
-		<option value="SWAHILI">
-		<option value="TEACH_ED">
-		<option value="THEATRE">
-		<option value="TRANS">
-		<option value="TURKISH">
-		<option value="VOICE">
-		<option value="WIND_PER">
-		<option value="YIDDISH">
+
       </datalist>
       <br>
 
-      <input type="number" name="number" id="course_number_input" placeholder="Course Number (eg. 330)">
-      <br><br>
+      <input type="number" list="course_nums" name="number" id="course_number_input" placeholder="Course Number (eg. 330)">
+	  <datalist name="course_nums" id="course_nums">
+
+      </datalist>
+	  <br><br>
 
       <button class="btn btn-primary" type="button" onclick="add_class()">Add Class</button>
     </form>
