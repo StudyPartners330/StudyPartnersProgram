@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="chat.css">
 
 
     <title>Chat</title>
@@ -44,24 +44,7 @@
             Student
         </div>
       </body>
-      <script language='javascript' type='text/javascript'>
-        function newMessage(){
-          var message = document.getElementById("inputTxt").value;
-          let result = (
-            `<section>
-                        <div class="msj macro">
-                            <div class="text text-l">
-                                <p style="background-color: #401F68; position: absolute; color: white">${message}</p> +
-                            </div>
-                        </div>
-                    </section>`               
-          )
-          console.log(message);
-          document.querySelector('.messages').innerHTML += result
-          document.querySelector('#inputTxt').value = ""
-        }
-        
-        </script>
+      
       <section class="messages"></section>
       <section>
         <div class="msj macro">
@@ -79,5 +62,24 @@
       </div>
     </div>
   </div>
+  
+  <script language='javascript' type='text/javascript'>
+        function newMessage(){
+          var message = document.getElementById("inputTxt").value;
+          let result = (
+            `<section>
+                        <div class="msj macro">
+                            <div class="text text-l">
+                                <p style="background-color: #401F68; position: absolute; color: white">${message}</p> +
+                            </div>
+                        </div>
+                    </section>`               
+          )
+          console.log(message);
+          document.querySelector('.messages').innerHTML += result;
+          document.querySelector('#inputTxt').value = "";
+        }
+        
+        </script>
 </footer>
 </html>
