@@ -81,9 +81,14 @@
 				})
 				.then((myJson) =>{
 					console.log(myJson);
+					var listy = new Array;
 					for (crs of myJson){
+						if (listy.includes(crs.catalog_num)){
+							continue;
+						}
 						document.getElementById("course_nums").innerHTML += `<option value="${crs.catalog_num}">
 						`;
+						listy.push(crs.catalog_num);
 					}
 				});
 		}
