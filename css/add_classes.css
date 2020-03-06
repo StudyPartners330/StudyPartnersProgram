@@ -30,6 +30,17 @@ input {
 	background-color: #4E2A84;
 	color: white;
 }
+
+#emptymessage {
+	text-align: center;
+	padding-right: 10%;
+	padding-left: 10%;
+}
+
+#padding {
+	margin-bottom: 6%;
+}
+
 .course-card {
 	margin-left: 5%;
 	margin-right: 5%;
@@ -60,5 +71,6 @@ hr {
 	margin-top: 5%;
 	margin-left: 10%;
 	margin-right: 10%;
+	margin-bottom: 10%;
 	width: 80%;
 }

@@ -17,6 +17,10 @@
 		var classes = [];
 
 		function add_class(){
+
+      // remove the "you have no classes so far" message
+      document.getElementById("emptymessage").innerHTML = "";
+
 			var sub = document.getElementById("course_subject_input").value.toUpperCase();
 			var nm = document.getElementById("course_number_input").value;
 			if (sub.length == 0 || nm.length < 3){
@@ -26,7 +30,7 @@
 			<div class="card course-card">
 				<div class="card-body">
 					<h5 class="card-title">${sub + " " + nm}</h5>
-					<a href="#" name="${sub + " " + nm}" class="btn btn-primary rm">Remove</a>
+					<a href="#" name="${sub + " " + nm}" class="btn btn-secondary rm">Remove</a>
 				</div>
 			</div>
 			`;
@@ -50,7 +54,7 @@
 			localStorage.setItem("classes", JSON.stringify(classes));
 		}
 	</script>
-		
+
 	<script>
 		function get_subjects(){
 			var url = "https://cors-anywhere.herokuapp.com/http://api.asg.northwestern.edu/subjects/?key=lCoAZTSDwNnBduU3&term=4760";
@@ -145,16 +149,18 @@
       </datalist>
 	  <br><br>
 
-      <button class="btn btn-primary" type="button" onclick="add_class()">Add Class</button>
+      <button class="btn btn-secondary" type="button" onclick="add_class()">Add Class</button>
     </form>
 
     <p id="title">My Courses:</p>
+    <div id="padding"></div>
+    <div id="emptymessage">You haven't added any courses yet. Add one and it will appear here!</div>
 
     <!-- classes entered -->
     <div id="current-courses">
 	</div>
 
-	<button class="viewmatchbtn btn btn-primary btn-lg" onclick="location.href='view_matches.html';">View Matches</button>
+	<button class="viewmatchbtn btn btn-secondary btn-lg" onclick="location.href='view_matches.html';">View Matches</button>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
