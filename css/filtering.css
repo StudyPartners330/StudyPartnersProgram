@@ -1,3 +1,6 @@
+body {
+	font-family: Nunito;
+}
 .navbar {
 	background-color: #401F68;
 	color: white;
@@ -69,4 +72,15 @@ hr {
 	margin-top: 3%;
 	margin-left: 2.5%;
 	margin-right: 2.5%;
+}
+#emptymessage {
+	text-align: center;
+	padding-right: 10%;
+	padding-left: 10%;
+	margin-top: 8%;
+}
+#addLink {
+	color: #4E2A84;
+	text-decoration: underline;
+	font-weight: 600;
 }

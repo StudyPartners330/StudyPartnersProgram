@@ -81,6 +81,7 @@
 
 </div></form>
 <div id="matches">
+    <p id="emptymessage">You haven't added any courses yet. <a id="addLink" href="add_classes.html">Add one<a> and your matches will appear here!<p>
 
 <!-- ################# MATCHES ################### -->
 
@@ -296,6 +297,15 @@
       }
     }
       
+    document.querySelector('#emptymessage').style.display = "none";  
+    // display message if no classes
+    if (myclasses === undefined || myclasses.length == 0){
+        document.querySelector('#emptymessage').style.display = "block";  
+        for (match of document.querySelectorAll('.match_card')){
+            match.style.display = "none";}
+
+    }
+    
 
     // set up drop down course filter selection
     document.querySelector('#filterSelect').style.display = "none";
