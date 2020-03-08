@@ -26,6 +26,9 @@
     if (email_valid && PW_valid && names_valid){
       window.location.replace('sign_up_1.html');
     }
+
+      name = document.accountInfo.fname.value;
+      localStorage.setItem("username", JSON.stringify(name));
   }
 </script>
 
