@@ -300,12 +300,18 @@
     document.querySelector('#emptymessage').style.display = "none";
 
     // display message if no classes
-    if (myclasses === undefined || myclasses.length == 0){
+    if (myclasses == 'null' || myclasses.length == 0){
         document.querySelector('#emptymessage').style.display = "block";  
         for (match of document.querySelectorAll('.match_card')){
-            match.style.display = "none";}
-
-    }
+            match.style.display = "none";}}
+      else{
+            // fill in user's classes
+    for (c of myclasses){
+      let a = c.replace( /\s/g, '');
+      a = a.substring(0, a.indexOf('-'));
+      document.querySelector("#classSelect").innerHTML +=
+      `<button class="courses btn filter ${a}" id=${a}>${c}</button>`;
+    }}
     
 
     // set up drop down course filter selection
@@ -314,13 +320,7 @@
     var filterList =[];
     var yearList = [];
 
-    // fill in user's classes
-    for (c of myclasses){
-      let a = c.replace( /\s/g, '');
-      a = a.substring(0, a.indexOf('-'));
-      document.querySelector("#classSelect").innerHTML +=
-      `<button class="courses btn filter ${a}" id=${a}>${c}</button>`;
-    }
+
 
 
     // toggle selection of courses
