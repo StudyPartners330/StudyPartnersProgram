@@ -30,7 +30,9 @@
 			<div class="card course-card">
 				<div class="card-body">
 					<h5 class="card-title">${sub + " " + nm}</h5>
-					<a href="#" name="${sub + " " + nm}" class="btn btn-secondary rm">Remove</a>
+
+					<a href="#" name="${sub + " " + nm}" class="btn rm">Remove</a>
+
 				</div>
 			</div>
 			`;
@@ -152,7 +154,8 @@
       </datalist>
 	  <br><br>
 
-      <button class="btn btn-secondary" type="button" onclick="add_class()">Add Class</button>
+      <button class="btn" type="button" onclick="add_class()">Add Class</button>
+
     </form>
 
     <p id="title">My Courses:</p>
@@ -163,7 +166,7 @@
     <div id="current-courses">
 	</div>
 
-	<button class="viewmatchbtn btn btn-secondary btn-lg" onclick="location.href='view_matches.html';">View Matches</button>
+	<button class="viewmatchbtn btn btn-lg" onclick="location.href='view_matches.html';">View Matches</button>
 
 
 	<script>

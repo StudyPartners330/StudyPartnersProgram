@@ -32,6 +32,11 @@ form {
 	background-color: #4E2A84;
 	border: 2.5px solid #4E2A84;
 }
+
+#FilterBtn:active {
+	color: white;
+	background-color: green;
+}
 .carousel-caption {
 	background: rgba(0, 0, 0, 0.5);
 }
@@ -60,6 +65,8 @@ hr {
 }
 #filterSelect {
 	background-color: white;
+	color: white;
+}
 }
 #emptymessage {
 	text-align: center;
