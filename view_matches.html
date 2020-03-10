@@ -18,6 +18,7 @@
     <title>View Matches</title>
 
     <script>
+    // get list of classes added from add_classes.html
     var retrievedData = localStorage.getItem("classes");
     var myclasses = JSON.parse(retrievedData);
     console.log(myclasses);
@@ -81,7 +82,7 @@
 
 </div></form>
 <div id="matches">
-    <p id="emptymessage">You haven't added any courses yet. <a id="addLink" href="add_classes.html">Add one<a> and your matches will appear here!<p>
+    <p id="emptymessage">You haven't added any courses yet. <br><a id="addLink" href="add_classes.html">Add one<a> and your matches will appear here!<p>
 
 <!-- ################# MATCHES ################### -->
 
@@ -298,11 +299,12 @@
       }
     }
       
+      // hide message initially
     document.querySelector('#emptymessage').style.display = "none";
 
 
     // display message if no classes
-    if (myclasses == 'null' || myclasses.length == 0){
+    if (myclasses == null || myclasses == 'null' || myclasses.length == 0){
         document.querySelector('#emptymessage').style.display = "block";  
         for (match of document.querySelectorAll('.match_card')){
             match.style.display = "none";}}
@@ -345,7 +347,7 @@
       });}
 
 
-
+      // filter years
     for (c of document.getElementsByClassName('filtery')) {
         c.addEventListener("click",function(ev){
         let name = ev.currentTarget;
@@ -385,7 +387,7 @@
         console.log(filters);
         let x = document.getElementsByClassName(filters);
         console.log(x);
-            // multiple years ???
+            // multiple years 
         for (match of x) {
             if (yearList.includes(match.getAttribute("year"))){
                 match.style.display = 'block';
