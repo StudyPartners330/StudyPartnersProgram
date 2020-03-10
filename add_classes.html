@@ -26,7 +26,7 @@
 			<div class="card course-card">
 				<div class="card-body">
 					<h5 class="card-title">${sub + " " + nm}</h5>
-					<a href="#" name="${sub + " " + nm}" class="btn btn-primary rm">Remove</a>
+					<a href="#" name="${sub + " " + nm}" class="btn rm">Remove</a>
 				</div>
 			</div>
 			`;
@@ -50,7 +50,7 @@
 			localStorage.setItem("classes", JSON.stringify(classes));
 		}
 	</script>
-		
+
 	<script>
 		function get_subjects(){
 			var url = "https://cors-anywhere.herokuapp.com/http://api.asg.northwestern.edu/subjects/?key=lCoAZTSDwNnBduU3&term=4760";
@@ -145,7 +145,7 @@
       </datalist>
 	  <br><br>
 
-      <button class="btn btn-primary" type="button" onclick="add_class()">Add Class</button>
+      <button class="btn" type="button" onclick="add_class()">Add Class</button>
     </form>
 
     <p id="title">My Courses:</p>
