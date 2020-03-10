@@ -30,6 +30,12 @@ hr {
 	background-color: #4E2A84;
 	color: white;
 }
+.btn:active {
+	color: white;
+}
+.btn:hover {
+	color: white;
+}
 
 .filter {
 	width: 44%;
@@ -65,8 +71,13 @@ hr {
 	width: 100%;
 }
 .headerbtn {
+	color: white;
 	width: 44%;
 	margin-top: 3%;
 	margin-left: 2.5%;
 	margin-right: 2.5%;
+}
+
+.headerbtn: active {
+	color: white;
 }
