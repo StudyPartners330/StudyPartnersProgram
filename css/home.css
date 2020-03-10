@@ -2,11 +2,13 @@ body {
 	font-family: Nunito;
 }
 .btn {
-	width: 30%;
+	margin: 14%;
+	margin-bottom: 0;
+	width: 70%;
 	font-weight: 700;
 	font-size: 1em;
-	color: #4E2A84;
-	background-color: white;
+	color: white;
+	background-color: #4E2A84;
 	border: 2.5px solid white;
 	border-radius: 10px;
 	text-align: center;
@@ -30,4 +32,19 @@ hr {
 	margin-bottom: 4px;
 	padding: 0;
 	border: 2px solid #401F68;
+}
+h1 {
+	margin-top: 10%;
+	font-weight: bold;
+	text-align: center;
+	color: #4E2A84;
+	font-size: 40px;
+	padding: 10px;
+
+}
+
+h2 {
+	font-size: 16px;
+	font-style: italic;
+	padding-bottom: 2%;
 }

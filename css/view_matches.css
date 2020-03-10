@@ -67,3 +67,12 @@ hr {
 	background-color: white;
 	color: white;
 }
+}
+#emptymessage {
+	text-align: center;
+	padding-right: 10%;
+	padding-left: 10%;
+}
+#addLink {
+	color: #4E2A84;
+}
