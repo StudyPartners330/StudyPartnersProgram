@@ -18,7 +18,6 @@
     <title>View Matches</title>
 
     <script>
-    // get list of classes added from add_classes.html
     var retrievedData = localStorage.getItem("classes");
     var myclasses = JSON.parse(retrievedData);
     console.log(myclasses);
@@ -46,9 +45,6 @@
           <li class="nav-item active">
             <a class="nav-link" href="view_matches.html">View Matches <span class="sr-only">(current"></span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="chat.html">Chat</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="index.html">Log Out</a>
         </li>
@@ -82,7 +78,7 @@
 
 </div></form>
 <div id="matches">
-    <p id="emptymessage">You haven't added any courses yet. <br><a id="addLink" href="add_classes.html">Add one<a> and your matches will appear here!<p>
+    <p id="emptymessage">You haven't added any courses yet. <a id="addLink" href="add_classes.html">Add one</a> and your matches will appear here!</p>
 
 <!-- ################# MATCHES ################### -->
 
@@ -216,7 +212,6 @@
             <a type="button" onclick="" href="chat.html" class="btn">Chat</a>
         </div>
     </div>
-
     <div class="match_card COMP_SCI213 Afternoon Weekend Weekday" year="Sophomore"> 
         <img src="https://i.pinimg.com/474x/59/33/e0/5933e0f5d0182cb9220e7a89dbbaa958.jpg" class="d-block w-100" alt="...">
         <div class="info">
@@ -295,16 +290,14 @@
     for (a of document.querySelectorAll("a.btn")){
       a.onclick = (ev) => {
         localStorage.setItem("name", ev.target.parentNode.firstElementChild.innerHTML);
-        localStorage.setItem("image", ev.target.parentNode.previousElementSibling.src)
+        localStorage.setItem("image", ev.target.parentNode.previousElementSibling.src);
       }
     }
       
-      // hide message initially
     document.querySelector('#emptymessage').style.display = "none";
 
-
     // display message if no classes
-    if (myclasses == null || myclasses == 'null' || myclasses.length == 0){
+    if (myclasses == 'null' || myclasses.length == 0){
         document.querySelector('#emptymessage').style.display = "block";  
         for (match of document.querySelectorAll('.match_card')){
             match.style.display = "none";}}
@@ -347,7 +340,7 @@
       });}
 
 
-      // filter years
+
     for (c of document.getElementsByClassName('filtery')) {
         c.addEventListener("click",function(ev){
         let name = ev.currentTarget;
@@ -370,6 +363,7 @@
     // toggle display of dropdown
     document.getElementById('filterBtn').addEventListener("click",function(ev){
       var x = document.getElementById("filterSelect");
+      console.log(x.style.display);
       if (x.style.display === "none") {
         x.style.display = "block";
       } else {
@@ -387,7 +381,7 @@
         console.log(filters);
         let x = document.getElementsByClassName(filters);
         console.log(x);
-            // multiple years 
+            // multiple years ???
         for (match of x) {
             if (yearList.includes(match.getAttribute("year"))){
                 match.style.display = 'block';
