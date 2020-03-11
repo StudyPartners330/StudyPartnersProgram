@@ -42,6 +42,8 @@
 					classes.splice(index,1);
 					console.log(classes);
 					localStorage.setItem("classes", JSON.stringify(classes));
+					if (classes.length == 0){	
+				document.getElementById("emptymessage").style.display = "block";} // displays empty message if no classes
 				})
 			}
 			document.getElementById("course_subject_input").value = "";
@@ -52,8 +54,7 @@
 
 			// Block third-party cookies must be turned off in chrome settings to allow access to localStorage
 			localStorage.setItem("classes", JSON.stringify(classes));
-			if (classes.length == 0){	
-				document.getElementById("emptymessage").style.display = "block";} // displays empty message if no classes
+			
 		}
 
 
