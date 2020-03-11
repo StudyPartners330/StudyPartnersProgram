@@ -19,7 +19,7 @@
 		function add_class(){
 
       // remove the "you have no classes so far" message
-      document.getElementById("emptymessage").innerHTML = "";
+     document.getElementById("emptymessage").style.display = "none";
 
 			var sub = document.getElementById("course_subject_input").value.toUpperCase();
 			var nm = document.getElementById("course_number_input").value;
@@ -52,6 +52,8 @@
 
 			// Block third-party cookies must be turned off in chrome settings to allow access to localStorage
 			localStorage.setItem("classes", JSON.stringify(classes));
+			if (classes.length == 0){	
+				document.getElementById("emptymessage").style.display = "block";} // displays empty message if no classes
 		}
 
 
@@ -170,7 +172,7 @@
     console.log(myclasses);
     if (myclasses.length > 0){
     	classes = myclasses;
-    	document.getElementById("emptymessage").innerHTML = "";
+    	document.getElementById("emptymessage").style.display = "none";
     	for (c of myclasses) {
 	    	document.getElementById("current-courses").innerHTML += `
 				<div class="card course-card">
