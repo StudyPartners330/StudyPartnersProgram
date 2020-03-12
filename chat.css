@@ -1,5 +1,9 @@
-body {
-    background: #e3cfff;
+* {
+    background-color: white;
+}
+h1 {
+  background-color: #e3cfff;
+  padding-bottom: 10px;
 }
 .navbar {
 	background-color: #401F68;
@@ -16,8 +20,16 @@ body {
 	background-color: white;
 }
 .profile-img {
-  width: 30%;
+  width: 25%;
+  margin-top: 15px;
+  height: auto;
+  display: block;
+  padding: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
 }
+
 
 .input_msg_write input {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
@@ -43,28 +55,48 @@ body {
     bottom: 0;
   }
 
-  img{
-    width: 10%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-  }
 
   .profile-name{
     text-align: center;
-    font-size: x-large;
+    font-size: .6em;
+    background-color: #e3cfff;
   }
 
   .messages{
     float: right;
-    margin-right: 40px;
-    left: 10px;
+    padding-right: 20px;
   }
 hr {
 	margin-top: 4px;
 	margin-bottom: 4px;
 	padding: 0;
 	border: 2px solid #401F68;
+}
+
+.msj.macro {
+  margin-left: 20px;
+}
+
+.ltext {
+  position: absolute;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 35%;
+  background-color: #e3e3e3;
+  color: black;
+  margin-top: 20px;
+}
+
+.mytext {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 40%;
+  background-color: #401F68; 
+  position: absolute; 
+  color: white;
+  right: 20px;
 }
