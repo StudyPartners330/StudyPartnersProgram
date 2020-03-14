@@ -11,8 +11,20 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="signup.css">
+<script>
+  window.onbeforeunload = function (e) {
+    e.preventDefault();
+    e.returnValue = "";
+  }
+</script>
+<link rel="stylesheet" type="text/css" href="css/signup.css">
 <!-- //add scripts for javascript  -->
+<script>
+  function nav_away(){
+    window.onbeforeunload = null;
+    location.href="add_classes.html";
+  }
+</script>
 <body>
 <a href="sign_up.html"> <button type="button" id="back-button" class="btn btn-secondary">BACK</button></a>
 
@@ -47,13 +59,193 @@
       </div>
 
       <div class="field form-group container">
-        <label class="a" for="major" >Major(s)</label><br>
-        <input id="gray" type="text" name="major" class="form-control" placeholder="Major(s) or Undecided">
+        <label class="a" for="major" >Major</label><br>
+
+        <!-- autocomplete form to add classes -->
+      <input id="gray" type="text" list="major" name="major" class="form-control" placeholder="Major or Undecided">
+      <datalist id="major">
+          <option value="African American Studies">
+          <option value="African Studies (adjunct major)">
+          <option value="American Studies">
+          <option value="Anthropology">
+          <option value="Applied Mathematics">
+          <option value="Art History">
+          <option value="Art Theory and Practice">
+          <option value="Asian American Studies">
+          <option value="Asian Languages and Cultures">
+          <option value="Biological Sciences">
+          <option value="Biomedical Engineering">
+          <option value="Chemical Engineering">
+          <option value="Chemistry">
+          <option value="Civil Engineering">
+          <option value="Classics">
+          <option value="Cognitive Science">
+          <option value="Combined Engineering and Communication Program">
+          <option value="Combined Music & Engineering Program">
+          <option value="Communication Studies">
+          <option value="Comparative Literary Studies">
+          <option value="Computer Engineering">
+          <option value="Computer Science (BS)">
+          <option value="Computer Science BA-CS">
+          <option value="Dance">
+          <option value="Earth and Planetary Sciences">
+          <option value="Economics">
+          <option value="Electrical Engineering">
+          <option value="English: Creative Writing">
+          <option value="English: Literature">
+          <option value="Environmental Engineering">
+          <option value="Environmental Sciences">
+          <option value="French">
+          <option value="Gender and Sexuality Studies">
+          <option value="Geography (adjunct major)">
+          <option value="German">
+          <option value="Global Health Studies (adjunct major)">
+          <option value="History">
+          <option value="Honors Program in Medical Education (HPME)">
+          <option value="Human Communication Sciences">
+          <option value="Human Development in Context">
+          <option value="Humanities (part-time)">
+          <option value="Industrial Engineering">
+          <option value="Integrated Engineering Studies (MIES)">
+          <option value="Integrated Science Program">
+          <option value="International Studies (adjunct major)">
+          <option value="Italian">
+          <option value="Jewish Studies">
+          <option value="Journalism">
+          <option value="Latina and Latino Studies">
+          <option value="Learning and Organizational Change">
+          <option value="Learning Sciences">
+          <option value="Legal Studies">
+          <option value="Linguistics">
+          <option value="Manufacturing & Design Engineering (BS-MaDE)">
+          <option value="Materials Science and Engineering (BA)">
+          <option value="Materials Science and Engineering (BS)">
+          <option value="Mathematical Methods in the Social Sciences">
+          <option value="Mathematics">
+          <option value="Mechanical Engineering">
+          <option value="Middle East North African Studies">
+          <option value="Music Performance: Brass">
+          <option value="Music Performance: Jazz Studies">
+          <option value="Music Performance: Percussion">
+          <option value="Music Performance: Piano">
+          <option value="Music Performance: Strings">
+          <option value="Music Performance: Voice & Opera">
+          <option value="Music Performance: Woodwinds">
+          <option value="Music Studies: Composition and Music Technology">
+          <option value="Music Studies: Music Education">
+          <option value="Music Studies: Musicology">
+          <option value="Music Studies: Music Theory and Cognition">
+          <option value="Neuroscience">
+          <option value="Northwestern Undergraduate Premedical Scholars Program (NUPSP)">
+          <option value="Performance Studies">
+          <option value="Philosophy">
+          <option value="Physics and Astronomy">
+          <option value="Political Science">
+          <option value="Psychology">
+          <option value="Radio/Television/ Film">
+          <option value="Religious Studies">
+          <option value="Russian and East European Studies">
+          <option value="Russian Language, Literature, and Culture">
+          <option value="Science in Human Culture (adjunct major)">
+          <option value="Secondary Teaching">
+          <option value="Social Policy">
+          <option value="Social Sciences (part-time)">
+          <option value="Sociology">
+          <option value="Spanish">
+          <option value="Statistics">
+          <option value="Theatre">
+          <option value="Undecided">
+      </datalist>
       </div>
 
       <div class="field form-group container">
-        <label class="a" for="minor" >Minor(s) </label><br>
-        <input id="gray" type="text" class="form-control" name="minor" placeholder="Minor(s)">
+        <label class="a" for="minor" >Minor </label><br>
+        <input id="gray" type="text" list="minors" name="minors" class="form-control" placeholder="Minor or None">
+
+        <datalist id="minors">
+          <option value="None">
+          <option value="African American Studies">
+          <option value="African Studies">
+          <option value="Anthropology">
+          <option value="Art History">
+          <option value="Arts Administration">
+          <option value="Art Theory and Practice">
+          <option value="Asian American Studies">
+          <option value="Asian Humanities">
+          <option value="Asian Languages">
+          <option value="Biotechnology and Biochemical Engineering">
+          <option value="Business German">
+          <option value="Business Institutions">
+          <option value="Catholic Studies">
+          <option value="Central Southeastern European Studies">
+          <option value="Chemistry">
+          <option value="Classical Studies">
+          <option value="Cognitive Science">
+          <option value="Commercial Music">
+          <option value="Computer Science">
+          <option value="Critical Theory">
+          <option value="Dance">
+          <option value="Earth Planetary Sciences">
+          <option value="Economics">
+          <option value="English: Creative Writing (cross-genre)">
+          <option value="English: Creative Writing (sequence-based)">
+          <option value="English: Literature">
+          <option value="Entrepreneurship">
+          <option value="Environmental Engineering">
+          <option value="Environmental Policy and Culture">
+          <option value="Film and Media Studies">
+          <option value="French">
+          <option value="Gender and Sexuality Studies">
+          <option value="General Music">
+          <option value="Geography">
+          <option value="German">
+          <option value="German Studies">
+          <option value="Global Health Studies">
+          <option value="Greek">
+          <option value="Hebrew Studies">
+          <option value="History">
+          <option value="Human Communication Sciences">
+          <option value="Humanities">
+          <option value="Integrated Engineering Studies (MIES)">
+          <option value="International Studies">
+          <option value="Italian">
+          <option value="Jewish Studies">
+          <option value="Latin">
+          <option value="Latina and Latino Studies">
+          <option value="Latin American and Caribbean Studies">
+          <option value="Legal Studies">
+          <option value="Linguistics">
+          <option value="Manufacturing & Design Engineering">
+          <option value="Materials Science and Engineering">
+          <option value="Mathematics">
+          <option value="Middle East North African Studies">
+          <option value="Music Cognition">
+          <option value="Music Composition">
+          <option value="Music Criticism">
+          <option value="Music Education">
+          <option value="Musicology">
+          <option value="Music Technology">
+          <option value="Music Theory">
+          <option value="Philosophy">
+          <option value="Physics and Astronomy">
+          <option value="Political Science">
+          <option value="Portuguese Language and Lusophone Cultures">
+          <option value="Psychology">
+          <option value="Religious Studies">
+          <option value="Russian">
+          <option value="Science in Human Culture">
+          <option value="Slavic Studies">
+          <option value="Sociology">
+          <option value="Sound Design">
+          <option value="Spanish">
+          <option value="Statistics">
+          <option value="Sustainability and Energy">
+          <option value="Theatre">
+          <option value="Transportation and Logistics">
+          <option value="World Literature">
+        </datalist>
+
+
       </div>
 
       <div class="field form-group container">
@@ -82,6 +274,7 @@
           <input type="checkbox" id="other" name="other" value="other">
           <input type="text" placeholder="Other">
               <br></div>
+
 
     <div class="text-center">
       <button class="btn btn-primary form form-group BTN" onclick="location.href='add_classes.html';">Save</button>

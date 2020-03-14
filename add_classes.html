@@ -17,19 +17,25 @@
 		var classes = [];
 
 		function add_class(){
+
+      // remove the "you have no classes so far" message
+     document.getElementById("emptymessage").style.display = "none";
+
 			var sub = document.getElementById("course_subject_input").value.toUpperCase();
 			var nm = document.getElementById("course_number_input").value;
 			if (sub.length == 0 || nm.length < 3){
 				return
 			}
-			document.getElementById("current-courses").innerHTML += `
+			// add course card
+			var tmpstr = document.getElementById("current-courses").innerHTML
+			document.getElementById("current-courses").innerHTML = `
 			<div class="card course-card">
 				<div class="card-body">
 					<h5 class="card-title">${sub + " " + nm}</h5>
-					<a href="#" name="${sub + " " + nm}" class="btn rm">Remove</a>
+					<a href="#" name="${sub + " " + nm}" class="btn btn-secondary rm">Remove</a>
 				</div>
 			</div>
-			`;
+			` + tmpstr;
 			for (cc of document.getElementsByClassName("course-card")){
 				cc.getElementsByClassName("rm")[0].addEventListener("click",function(ev) {
 					let currcourse = ev.currentTarget;
@@ -38,6 +44,8 @@
 					classes.splice(index,1);
 					console.log(classes);
 					localStorage.setItem("classes", JSON.stringify(classes));
+					if (classes.length == 0){	
+				document.getElementById("emptymessage").style.display = "block";} // displays empty message if no classes
 				})
 			}
 			document.getElementById("course_subject_input").value = "";
@@ -48,7 +56,11 @@
 
 			// Block third-party cookies must be turned off in chrome settings to allow access to localStorage
 			localStorage.setItem("classes", JSON.stringify(classes));
+			
 		}
+
+
+
 	</script>
 
 	<script>
@@ -98,37 +110,36 @@
 
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg ">
-  <a class="navbar-brand" href="#">ADD/VIEW COURSES</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"><hr><hr><hr></span>
-  </button>
+		<a class="navbar-brand" href="#">ADD/VIEW COURSES</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"><hr><hr><hr></span>
+		</button>
 
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" href="home.html">Home</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="add_classes.html">Add/View Courses <span class="sr-only">(current"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="view_matches.html">View Matches</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="chat.html">Chat</a>
-	  </li>
-	  <li class="nav-item">
-		  <a class="nav-link" href="index.html">Log Out</a>
-	  </li>
-    </ul>
- <!--
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
--->
-  </div>
-</nav>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			<li class="nav-item">
+				<a class="nav-link" href="home.html">Home</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="add_classes.html">Add/View Courses <span class="sr-only">(current"></span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="view_matches.html">View Matches</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="index.html">Log Out</a>
+			</li>
+			</ul>
+		<!--
+			<form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		-->
+		</div>
+	</nav>
+
 
 
 <!-- autocomplete form to add classes -->
@@ -145,16 +156,51 @@
       </datalist>
 	  <br><br>
 
-      <button class="btn" type="button" onclick="add_class()">Add Class</button>
+      <button class="btn btn-secondary" type="button" onclick="add_class()">Add Class</button>
     </form>
 
     <p id="title">My Courses:</p>
+    <div id="padding"></div>
+    <div id="emptymessage">You haven't added any courses yet. Add one and it will appear here!</div>
 
     <!-- classes entered -->
     <div id="current-courses">
 	</div>
 
-	<button class="viewmatchbtn btn btn-lg" onclick="location.href='view_matches.html';">View Matches</button>
+	<button class="viewmatchbtn btn btn-secondary btn-lg" onclick="location.href='view_matches.html';">View Matches</button>
+
+
+	<script>
+	// keeps classes if already entered then navigated away from page, otherwise displays message to add classes
+	var retrievedData = localStorage.getItem("classes");
+	var myclasses = JSON.parse(retrievedData);
+    console.log(myclasses);
+    if (myclasses.length > 0){
+    	classes = myclasses;
+    	document.getElementById("emptymessage").style.display = "none";
+    	for (c of myclasses) {
+	    	document.getElementById("current-courses").innerHTML += `
+				<div class="card course-card">
+					<div class="card-body">
+						<h5 class="card-title">${c}</h5>
+						<a href="#" name="${c}" class="btn btn-secondary rm">Remove</a>
+					</div>
+				</div>
+				`;}
+
+		for (cc of document.getElementsByClassName("course-card")){
+			cc.getElementsByClassName("rm")[0].addEventListener("click",function(ev) {
+				let currcourse = ev.currentTarget;
+				let index = classes.indexOf(currcourse.getAttribute("name"));
+				this.parentElement.parentElement.remove();
+				classes.splice(index,1);
+				console.log(classes);
+				localStorage.setItem("classes", JSON.stringify(classes));
+			})
+		}
+    }
+
+	</script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

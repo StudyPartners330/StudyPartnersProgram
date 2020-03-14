@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 
 	<title>Home</title>
-	
+
   </head>
   <body>
 
@@ -33,9 +33,6 @@
       <li class="nav-item">
         <a class="nav-link" href="view_matches.html">View Matches</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="chat.html">Chat</a>
-	  </li>
 	  <li class="nav-item">
 		  <a class="nav-link" href="index.html">Log Out</a>
 	  </li>
@@ -49,6 +46,20 @@
   </div>
 </nav>
 
+  <h1 id="AcctInfo" class="text-center">Welcome</h1>
+ <script>
+    var retrievedData = localStorage.getItem("username");
+    var name = JSON.parse(retrievedData);
+    console.log(name);
+
+    if(name == null || name == "null"){
+      document.getElementById('AcctInfo').innerHTML += `!`
+    }
+    else{
+      document.getElementById('AcctInfo').innerHTML += ` ${name}!`
+    }
+    </script>
+  <h2 class="text-center">Find study partners today!</h2>
 	<button class="addclassbtn btn btn-primary btn-lg" onclick="location.href='add_classes.html';">Add Classes</button>
 	<button class="viewmatchbtn btn btn-primary btn-lg" onclick="location.href='view_matches.html';">View Matches</button>
 
