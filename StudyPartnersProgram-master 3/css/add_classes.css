@@ -1,0 +1,76 @@
+body {
+	font-family: Nunito;
+}
+form {
+	padding: 8%;
+	font-size: 1.5em;
+	padding-top: 2%;
+}
+
+input {
+	margin-top: 5%;
+	width: 100%;
+}
+
+.btn {
+	width: 20%;
+	font-weight: 700;
+	font-size: 1em;
+	color: #4E2A84;
+	background-color: white;
+	border: 2.5px solid #4E2A84;
+}
+#title {
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+	margin-bottom: 0;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color: #4E2A84;
+	color: white;
+}
+
+#emptymessage {
+	text-align: center;
+	padding-right: 10%;
+	padding-left: 10%;
+}
+
+#padding {
+	margin-bottom: 6%;
+}
+
+.course-card {
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+}
+
+.navbar {
+	background-color: #401F68;
+	color: white;
+	font-weight: 600;
+}
+.navbar-brand {
+	color: white;
+}
+.nav-link {
+	color: white;
+}
+.navbar-toggler {
+	background-color: white;
+}
+hr {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding: 0;
+	border: 2px solid #401F68;
+}
+.viewmatchbtn {
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 10%;
+	width: 80%;
+}

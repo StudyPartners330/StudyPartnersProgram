@@ -1,0 +1,83 @@
+body {
+	font-family: Nunito;
+}
+
+body > * {
+	height: auto;
+}
+
+#AcctInfo {
+	color: white;
+	font-family: Nunito;
+	text-align: center;
+}
+
+.container {
+	font-family: Nunito;
+}
+
+#back-button{
+	margin-left: 10px;
+	margin-top: 10px;
+}
+#password, #email {
+	background-color: #ededed;
+	font-family: Nunito;
+  margin-bottom: 2%;
+  border-color: #5B3B8C;
+}
+
+#gotosignup {
+	padding-top: 1%;
+	font-family: Nunito;
+}
+
+	body {
+		margin: 0px;
+	}
+	input {
+		width: 85%;
+	}
+	form > * {
+		margin-bottom: 5%;
+	}
+	#goBack {
+		font-family: Nunito;
+
+	}
+	#signUp {
+		color: #5B3B8C;
+		text-decoration: none;
+		font-weight: 900;
+		font-family: Nunito;
+	}
+	.btn-primary {
+		font-weight: bold;
+		background-color: #5B3B8C;
+		color: white;
+		cursor: pointer;
+		line-height: 150%;
+		width: 60%;
+		margin: auto;
+		border-radius: 25px;
+		border-color: #5B3B8C;
+		font-family: Nunito;
+
+	}
+h2 {
+	font-size: 16px;
+	font-style: italic;
+	padding-bottom: 2%;
+}
+label {
+	font-size: 1.5em;
+}
+h1 {
+	margin-top: 0%;
+	font-weight: bold;
+	text-align: center;
+	font-weight: 700;
+	background-color: #4E2A84;
+	color: white;
+	padding: 14px;
+}

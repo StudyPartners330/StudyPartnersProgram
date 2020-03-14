@@ -1,0 +1,70 @@
+body {
+    background: #e3cfff;
+}
+.navbar {
+	background-color: #401F68;
+	color: white;
+	font-weight: 600;
+}
+.navbar-brand {
+	color: white;
+}
+.nav-link {
+	color: white;
+}
+.navbar-toggler {
+	background-color: white;
+}
+.profile-img {
+  width: 30%;
+}
+
+.input_msg_write input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium black;
+    color: #4c4c4c;
+    font-size: 15px;
+    min-height: 48px;
+    width: 100%;
+  }
+  
+  .type_msg {border-top: 2px solid black;position: absolute; bottom: 0; width: 100%;}
+  .msg_send_btn {
+    background: blue none repeat scroll 0 0;
+    border-radius: 25%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    height: 33px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    width: 60px;
+    bottom: 0;
+  }
+
+  img{
+    width: 10%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+  }
+
+  .profile-name{
+    text-align: center;
+    font-size: x-large;
+  }
+
+  .messages{
+    float: right;
+    margin-right: 40px;
+    left: 10px;
+  }
+hr {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding: 0;
+	border: 2px solid #401F68;
+}
