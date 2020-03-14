@@ -105,5 +105,28 @@ hr {
 	color: #4E2A84;
 	text-decoration: underline;
 	font-weight: 600;
+}
 
+.match_card {
+	height: 60%;
+	margin: 5%;
+	padding: 3%;
+	border: solid 3px #4E2A84;
+	border-radius: 5px;
+}    
+.match_card > h5 {
+	margin-top: 2%;
+	font-weight: 700;
+	margin-bottom: 2%;
+}
+.course {
+	margin-bottom: 2%;
+}
+.availability {
+	margin-bottom: 2%;
+}
+.info > .btn {
+	width: 60%;
+	margin-left: 19%;
+	margin-right: 19%;
 }
